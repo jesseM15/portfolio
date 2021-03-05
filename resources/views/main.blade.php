@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jesse Merritt</title>
-        <link href="css/app.css">
         <script defer src="js/app.js"></script>
     </head>
     <body>
