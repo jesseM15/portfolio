@@ -20,7 +20,7 @@ a:hover {
     text-decoration: none;
 }
 
-#app {
+#app-component {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -54,4 +54,15 @@ footer {
 .container {
     width: 800px;
     margin: 0 auto;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }

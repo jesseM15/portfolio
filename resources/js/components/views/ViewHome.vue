@@ -1,3 +1,11 @@
 <template>
-    <h1>Home Page</h1>
+    <div id="view-home">
+        <h1>Home Page</h1>
+    </div>
 </template>
+
+<script>
+    export default {
+
+    }
+</script>
