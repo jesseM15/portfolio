@@ -1,3 +1,8 @@
+@import 'primevue/resources/themes/arya-blue/theme.css';
+@import 'primevue/resources/primevue.min.css';
+@import 'primeicons/primeicons.css';
+@import 'primeflex/primeflex.css';
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -13,6 +18,7 @@ body {
 
 a {
     color: #fff;
+    text-decoration: none;
 }
 
 a:hover {
@@ -26,7 +32,8 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     flex-shrink: 0;
-    background-color: $body-bg;
+    background: #0972d4;
+    background: linear-gradient(0deg, #0972d4 0%, #1982e4 100%);
     color: $body-color;
     margin: 0;
 }
@@ -37,10 +44,10 @@ header {
 }
 
 main {
-    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
     flex-grow: 1;
-    background: #0972d4;
-    background: linear-gradient(0deg, #0972d4 0%, #1982e4 100%);
 }
 
 footer {
