@@ -9,29 +9,32 @@
 </template>
 
 <script>
-import Menubar from 'primevue/menubar';
+import Menubar from 'primevue/menubar'
+import { reactive } from 'vue'
 
 export default {
     components: {
         Menubar,
     },
 
-    data() {
+    setup() {
+        const items = reactive([
+            {
+                label: 'About',
+                to: '/about',
+            },
+            {
+                label: 'Portfolio',
+                to: '/portfolio',
+            },
+            {
+                label: 'Contact',
+                to: '/contact',
+            },
+        ])
+
         return {
-            items: [
-                {
-                    label: 'About',
-                    to: '/about',
-                },
-                {
-                    label: 'Portfolio',
-                    to: '/portfolio',
-                },
-                {
-                    label: 'Contact',
-                    to: '/contact',
-                },
-            ],
+            items,
         }
     },
 }
