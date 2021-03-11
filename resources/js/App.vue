@@ -17,7 +17,7 @@
 </template>
 
 <script>
-    import NavBar from './NavBar.vue'
+    import NavBar from '@/components/NavBar.vue'
 
     export default {
         name: 'App',
@@ -29,5 +29,5 @@
 </script>
 
 <style lang="scss">
-    @import '../../sass/app';
+    @import '~/app';
 </style>

@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 import { createApp } from 'vue';
-import App from './components/App.vue';
+import App from '@/App.vue';
 import PrimeVue from 'primevue/config';
-import router from './router';
+import router from '@/router';
 
 
 
