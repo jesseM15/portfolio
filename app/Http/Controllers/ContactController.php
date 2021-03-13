@@ -11,7 +11,7 @@ class ContactController extends Controller
     public function submitContactForm(Request $request)
     {
         $request->validate([
-            'name' => 'required|max:255',
+            'name' => 'max:255',
             'email' => 'required|email|max:255',
             'message' =>  'required|max:4000',
             'recaptcha_response' => 'required',
@@ -34,7 +34,7 @@ class ContactController extends Controller
         }
 
         $contactForm = new \stdClass();
-        $contactForm->name = $request->input('name');
+        $contactForm->name = $request->input('name') ?? '';
         $contactForm->email = $request->input('email');
         $contactForm->message = $request->input('message');
 

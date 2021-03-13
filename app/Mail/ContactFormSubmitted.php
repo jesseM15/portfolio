@@ -30,7 +30,7 @@ class ContactFormSubmitted extends Mailable
      */
     public function build()
     {
-        return $this->from('jmerrittdev@gmail.com')
+        return $this->from(env('CONTACT_EMAIL_ADDRESS'))
                     ->view('emails.contact');
     }
 }

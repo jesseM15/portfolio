@@ -5,11 +5,11 @@
                 <template #content>
                     <small id="contact-form-legend">* Required field</small>
                     <br>
-                    <form id="contact-form" @submit.prevent="onSubmit" novalidate>
+                    <form @submit.prevent="onSubmit" novalidate>
                         <div class="input-group">
                             <span class="p-float-label">
                                 <InputText id="contact-form-name" class="contact-form-input" type="text" v-model="contactFormName" />
-                                <label for="contact-form-name">Name*</label>
+                                <label for="contact-form-name">Name</label>
                             </span>
                             <small id="contact-form-error-name" class="p-error"></small>
                         </div>
