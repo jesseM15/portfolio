@@ -8,8 +8,17 @@
                 <p>lorem ipsum</p>
             </div>
             <div class="p-col-12 p-md-6">
-                <p>foo bar</p>
+                <contact-form></contact-form>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+    import ContactForm from '@/components/ContactForm.vue'
+    export default {
+        components: {
+            ContactForm,
+        }
+    }
+</script>
