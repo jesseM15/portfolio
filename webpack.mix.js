@@ -20,4 +20,9 @@ mix.js('resources/js/app.js', 'public/js')
             }
         }
     })
+    .browserSync({
+        proxy: 'localhost',
+        port: 32816,
+        open: false,
+    })
     .vue();
