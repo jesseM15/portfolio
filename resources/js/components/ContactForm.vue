@@ -45,7 +45,7 @@
                     <div class="center">Thank you!</div>
                 </template>
                 <template #content>
-                    <p id="contact-form-thanks" class="center">Your feedback is important to me.</p>
+                    <p id="contact-form-thanks" class="center">For taking the time to reach out.</p>
                 </template>
             </Card>
         </transition>
@@ -94,14 +94,18 @@
             const { executeRecaptcha, recaptchaLoaded } = useReCaptcha()
 
             const recaptcha = async (contactForm) => {
-                // (optional) Wait until recaptcha has been loaded.
-                await recaptchaLoaded()
-            
-                // Execute reCAPTCHA with action "login".
-                const token = await executeRecaptcha('contactFormSubmitted')
-            
-                // Do stuff with the received token.
-                contactForm.recaptcha_response = token
+                if (process.env.APP_ENV !== 'local') {
+                    // (optional) Wait until recaptcha has been loaded.
+                    await recaptchaLoaded()
+                
+                    // Execute reCAPTCHA with action "login".
+                    const token = await executeRecaptcha('contactFormSubmitted')
+                
+                    // Do stuff with the received token.
+                    contactForm.recaptcha_response = token
+                } else {
+                    contactForm.recaptcha_response = 'local'
+                }                
 
                 const options = {
                     method: 'post',

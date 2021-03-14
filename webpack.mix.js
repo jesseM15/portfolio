@@ -1,3 +1,5 @@
+require('dotenv').config()
+let webpack = require('webpack')
 const mix = require('laravel-mix');
 
 /*
@@ -11,6 +13,13 @@ const mix = require('laravel-mix');
  |
  */
 
+let dotenvplugin = new webpack.DefinePlugin({
+    'process.env': {
+        APP_ENV: JSON.stringify(process.env.APP_ENV || 'production'),
+        RECAPTCHA_SITE_KEY: JSON.stringify(process.env.RECAPTCHA_SITE_KEY || '')
+    }
+})
+
 mix.js('resources/js/app.js', 'public/js')
     .webpackConfig({
         resolve: {
@@ -18,7 +27,10 @@ mix.js('resources/js/app.js', 'public/js')
                 '@': __dirname + '/resources/js/',
                 '~': __dirname + '/resources/sass/',
             }
-        }
+        },
+        plugins: [
+            dotenvplugin,
+        ]
     })
     .browserSync({
         proxy: 'localhost',

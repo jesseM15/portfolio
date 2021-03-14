@@ -17,20 +17,23 @@ class ContactController extends Controller
             'recaptcha_response' => 'required',
         ]);
 
-        $response = file_get_contents(
-            "https://www.google.com/recaptcha/api/siteverify?secret=" . env('RECAPTCHA_SECRET_KEY') . "&response=" . $request->input('recaptcha_response') . "&remoteip=" . $_SERVER['REMOTE_ADDR']
-        );
-        // use json_decode to extract json response
-        $response = json_decode($response);
-    
-        if ($response->success === false) {
-            //Do something with error
-        }
+        if (env('APP_ENV') !== 'local')
+        {
+            $response = file_get_contents(
+                "https://www.google.com/recaptcha/api/siteverify?secret=" . env('RECAPTCHA_SECRET_KEY') . "&response=" . $request->input('recaptcha_response') . "&remoteip=" . $_SERVER['REMOTE_ADDR']
+            );
+            // use json_decode to extract json response
+            $response = json_decode($response);
         
-        //... The Captcha is valid you can continue with the rest of your code
-        //... Add code to filter access using $response . score
-        if ($response->success==true && $response->score <= 0.5) {
-            //Do something to denied access
+            if ($response->success === false) {
+                //Do something with error
+            }
+            
+            //... The Captcha is valid you can continue with the rest of your code
+            //... Add code to filter access using $response . score
+            if ($response->success==true && $response->score <= 0.5) {
+                //Do something to denied access
+            }
         }
 
         $contactForm = new \stdClass();
