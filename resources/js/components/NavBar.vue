@@ -1,5 +1,5 @@
 <template>
-    <div id="navbar">
+    <div id="navbar" class="container">
         <Menubar :model="items">
             <template #start>
                 <router-link to="/">Jesse Merritt</router-link>
@@ -43,5 +43,7 @@ export default {
 <style lang="scss" scoped>
     .p-menubar {
         justify-content: space-between;
+        background: #073B4C;
+        border: none;
     }
 </style>

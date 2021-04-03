@@ -4,11 +4,7 @@
             <nav-bar></nav-bar>
         </header>
         <main>
-            <router-view v-slot="{ Component }">
-                <transition name="fade" mode="out-in">
-                    <component :is="Component" />
-                </transition>
-            </router-view>
+            <view-home></view-home>
         </main>
         <footer>
             &copy;2021 jfry
@@ -18,12 +14,14 @@
 
 <script>
     import NavBar from '@/components/NavBar.vue'
+    import ViewHome from '@/views/ViewHome.vue'
 
     export default {
         name: 'App',
 
         components: {
             NavBar,
+            ViewHome,
         },
     }
 </script>
