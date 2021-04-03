@@ -1,6 +1,6 @@
 <template>
     <div id="view-home">
-        <div class="p-grid">
+        <div class="p-grid container">
             <div class="p-col-12">
                 <h1>Home Page</h1>
             </div>

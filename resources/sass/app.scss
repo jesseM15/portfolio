@@ -32,8 +32,7 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     flex-shrink: 0;
-    background: #0972d4;
-    background: linear-gradient(0deg, #0972d4 0%, #1982e4 100%);
+    background: #fff;
     color: $body-color;
     margin: 0;
 }
@@ -41,12 +40,11 @@ a:hover {
 header {
     width: 100%;
     background-color: #1982e4;
+    z-index: 10;
 }
 
 main {
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
     padding: 0 1rem;
     flex-grow: 1;
 }
@@ -55,12 +53,13 @@ footer {
     width: 100%;
     min-height: 3rem;
     text-align: center;
-    border-top: 1px solid #1982e4;
+    border-top: 1px solid #666;
     padding-top: 0.75rem;
+    z-index: 10;
 }
 
 .container {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
