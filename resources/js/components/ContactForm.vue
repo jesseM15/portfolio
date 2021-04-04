@@ -28,7 +28,7 @@
                             <small id="contact-form-error-message" class="p-error"></small>
                         </div>
                         <div class="input-group">
-                            <Button type="submit" label="Send" class="p-d-block p-mx-auto" />
+                            <Button type="submit" label="Send" class="p-button-raised p-button-rounded p-d-block p-mx-auto" />
                             <!-- IMPORTANT: Do not remove! This message is required in order to use google recaptcha without displaying widget -->
                             <!-- See: https://developers.google.com/recaptcha/docs/faq#id-like-to-hide-the-recaptcha-v3-badge-what-is-allowed -->
                             <div id="required-recaptcha-message">
@@ -162,6 +162,17 @@
 
     .p-float-label label {
         margin-bottom: 16px;
+    }
+
+    .p-button {
+        background: #06D6A0;
+        color: #fff;
+        font-family: 'Poppins', arial, sans-serif;
+    }
+
+    .p-button:hover {
+        background: #2daa89;
+        color: #eee;
     }
 
     #required-recaptcha-message {

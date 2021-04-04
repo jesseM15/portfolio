@@ -1,15 +1,8 @@
 <template>
     <section id="section-hero">
-        <div id="container-hero" class="container">
-            <div>
-                <span id="tagline-intro">Hi there, I am a full stack</span>
-                <br>
-                <span id="tagline">Web Developer</span>
-                <br><br><br><br>
-                <Button label="Contact Me" class="p-button-raised p-button-rounded p-button-lg" />
-            </div>
-            <div id="devices">
-                <svg width="414" height="344" viewBox="0 0 414 344" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div id="container-hero" class="container p-grid">
+            <div id="devices" class="p-md-6 center">
+                <svg width="414" height="344" viewBox="0 0 414 344" fill="none" xmlns="http://www.w3.org/2000/svg" class="responsive">
                 <path d="M23.4361 197.335C124.816 96.2195 1.56388 145.312 95 48.3629C104.457 39.2739 145.106 8.11926 179 2.36288C221.368 -4.83258 256.573 3.50682 277 39.8629C297.427 76.2189 258.922 74.4581 300.718 114.019C342.33 153.404 358.107 155.988 388.48 181.863C432.5 219.363 408 250.863 388.48 275.363C363.543 306.663 326.14 324.261 274.5 310.863C236.859 301.097 208.039 303.752 159.24 336.321C110.441 368.89 -62.1134 282.661 23.4361 197.335Z" fill="#174B5C"/>
                 <rect x="149" y="64" width="203.474" height="127.098" rx="12" fill="#666666"/>
                 <rect x="151.949" y="65.7693" width="197.577" height="123.559" rx="12" fill="#333333"/>
@@ -48,6 +41,13 @@
                 <rect width="33.9444" height="8.66667" rx="4" transform="matrix(0.965926 -0.258819 0.511893 0.859049 304.628 255.808)" fill="#C4C4C4"/>
                 </svg>
             </div>
+            <div class="p-md-6 center">
+                <span id="tagline-intro">Hi there, I am a full stack</span>
+                <br>
+                <span id="tagline">Web Developer</span>
+                <br><br><br><br>
+                <Button label="Contact Me" class="p-button-raised p-button-rounded p-button-lg" />
+            </div>
         </div>
     </section>
     <svg id="top-wave-bg" width="1000" height="100" viewBox="0 0 1000 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -60,7 +60,8 @@
 
     #section-hero {
         background: #073B4C;
-        height: 80vh;
+        // height: 80vh;
+        padding: 4rem 0;
     }
 
     #container-hero {
@@ -77,6 +78,7 @@
 
     #tagline {
         font-size: 4rem;
+        font-weight: 300;
     }
 
     #top-wave-bg {
@@ -86,6 +88,7 @@
     .p-button {
         background: #06D6A0;
         color: #fff;
+        font-family: 'Poppins', arial, sans-serif;
     }
 
     .p-button:hover {
