@@ -1,5 +1,5 @@
 <template>
-    <svg id="bottom-wave-bg" viewBox="0 0 1000 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <svg id="bottom-wave-bg"  viewBox="0 0 1000 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M1000 99.9999L1000 35.1377C1000 35.1377 948.923 92.123 747.621 93.1228C640.247 93.6561 550.253 68.0204 464.267 43.5261C389.049 22.0994 316.897 1.54612 238.858 0.146704C71.6074 -2.85255 5.58891e-05 41.1362 5.58891e-05 41.1362L6.10352e-05 100L1000 99.9999Z" fill="#073B4C"/>
     </svg>
     <section id="section-contact">

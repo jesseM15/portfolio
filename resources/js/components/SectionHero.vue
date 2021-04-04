@@ -46,14 +46,57 @@
                 <br>
                 <span id="tagline">Web Developer</span>
                 <br><br><br><br>
-                <Button label="Contact Me" class="p-button-raised p-button-rounded p-button-lg" />
+                <Button label="Contact Me" class="p-button-raised p-button-rounded p-button-lg"  @click="scrollToContact($event)" />
             </div>
         </div>
     </section>
-    <svg id="top-wave-bg" width="1000" height="100" viewBox="0 0 1000 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <svg id="top-wave-bg" viewBox="0 0 1000 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L0 64.8622C0 64.8622 51.0766 7.87689 252.379 6.87714C359.753 6.34388 449.747 31.9795 535.733 56.4739C610.951 77.9005 683.103 98.4538 761.142 99.8533C928.393 102.853 1000 58.8638 1000 58.8638V0H0Z" fill="#073B4C"/>
     </svg>
 </template>
+
+<script>
+import Menubar from 'primevue/menubar'
+import { reactive } from 'vue'
+
+export default {
+    components: {
+        Menubar,
+    },
+
+    setup() {
+        const items = reactive([
+            {
+                label: 'About',
+                command: (event) => {
+                    document.querySelector('#section-about').scrollIntoView({behavior: 'smooth'})
+                }
+            },
+            {
+                label: 'Skills',
+                command: (event) => {
+                    document.querySelector('#section-skills').scrollIntoView({behavior: 'smooth'})
+                }
+            },
+            {
+                label: 'Contact',
+                command: (event) => {
+                    document.querySelector('#section-contact').scrollIntoView({behavior: 'smooth'})
+                }
+            },
+        ])
+
+        const scrollToContact = (e) => {
+            document.querySelector('#section-contact').scrollIntoView({behavior: 'smooth'})
+        }
+
+        return {
+            items,
+            scrollToContact,
+        }
+    },
+}
+</script>
 
 <style lang="scss" scoped>
     @import '~/app.scss';
@@ -61,7 +104,7 @@
     #section-hero {
         background: #073B4C;
         // height: 80vh;
-        padding: 4rem 0;
+        padding: 8rem 0 4rem 0;
     }
 
     #container-hero {
