@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { gsap } from "gsap";
 
 import { createApp } from 'vue';
 import App from '@/App.vue';
@@ -10,6 +11,7 @@ import Button from 'primevue/button';
 
 window.axios = axios;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.gsap = gsap;
 
 const app = createApp(App)
 app.use(router)

@@ -56,42 +56,13 @@
 </template>
 
 <script>
-import Menubar from 'primevue/menubar'
-import { reactive } from 'vue'
-
 export default {
-    components: {
-        Menubar,
-    },
-
     setup() {
-        const items = reactive([
-            {
-                label: 'About',
-                command: (event) => {
-                    document.querySelector('#section-about').scrollIntoView({behavior: 'smooth'})
-                }
-            },
-            {
-                label: 'Skills',
-                command: (event) => {
-                    document.querySelector('#section-skills').scrollIntoView({behavior: 'smooth'})
-                }
-            },
-            {
-                label: 'Contact',
-                command: (event) => {
-                    document.querySelector('#section-contact').scrollIntoView({behavior: 'smooth'})
-                }
-            },
-        ])
-
         const scrollToContact = (e) => {
             document.querySelector('#section-contact').scrollIntoView({behavior: 'smooth'})
         }
 
         return {
-            items,
             scrollToContact,
         }
     },
@@ -103,7 +74,6 @@ export default {
 
     #section-hero {
         background: #073B4C;
-        // height: 80vh;
         padding: 8rem 0 4rem 0;
     }
 
