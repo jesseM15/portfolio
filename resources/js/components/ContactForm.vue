@@ -31,6 +31,7 @@
                             <Button type="submit" label="Send" class="p-button-raised p-button-rounded p-d-block p-mx-auto" />
                             <!-- IMPORTANT: Do not remove! This message is required in order to use google recaptcha without displaying widget -->
                             <!-- See: https://developers.google.com/recaptcha/docs/faq#id-like-to-hide-the-recaptcha-v3-badge-what-is-allowed -->
+                            <small id="contact-form-error-all" class="p-error p-d-block p-mx-auto"></small>
                             <div id="required-recaptcha-message">
                                 This site is protected by reCAPTCHA and the Google
                                 <a href="https://policies.google.com/privacy">Privacy Policy</a> and
@@ -87,6 +88,7 @@
                 document.querySelector('#contact-form-error-name').innerHTML = ''
                 document.querySelector('#contact-form-error-email').innerHTML = ''
                 document.querySelector('#contact-form-error-message').innerHTML = ''
+                document.querySelector('#contact-form-error-all').innerHTML = ''
 
                 recaptcha(contactForm)
             }
@@ -118,6 +120,8 @@
                 .then(function (response) {
                     if (response.data.success) {
                         contactFormSubmitted.value = true
+                    } else {
+                        document.getElementById('contact-form-error-all').innerHTML = 'Sorry there was a problem submitting the form, please try again.'
                     }
                 })
                 .catch(function (error) {
@@ -197,5 +201,10 @@
     .fade-contact-form-enter-from,
     .fade-contact-form-leave-to {
         opacity: 0;
+    }
+
+    #contact-form-error-all {
+        margin: 1rem 0;
+        text-align: center;
     }
 </style>

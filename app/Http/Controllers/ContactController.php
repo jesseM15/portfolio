@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactFormSubmitted;
 
 class ContactController extends Controller
 {
@@ -27,12 +26,14 @@ class ContactController extends Controller
         
             if ($response->success === false) {
                 //Do something with error
+                return response(['success' => false]);
             }
             
             //... The Captcha is valid you can continue with the rest of your code
             //... Add code to filter access using $response . score
             if ($response->success==true && $response->score <= 0.5) {
                 //Do something to denied access
+                return response(['success' => false]);
             }
         }
 
@@ -41,7 +42,8 @@ class ContactController extends Controller
         $contactForm->email = $request->input('email');
         $contactForm->message = $request->input('message');
 
-        Mail::to(env('CONTACT_EMAIL_ADDRESS'))->send(new ContactFormSubmitted($contactForm));
+        // NOTE: nearlyfreespeech requires the use of php mail() function
+        mail(env('CONTACT_EMAIL_ADDRESS'), 'Personal site contact form submitted', print_r($contactForm, true));
 
         return response(['success' => true]);
     }
