@@ -59,8 +59,7 @@
                 <span id="tagline-intro">Hi there, I am a full stack</span>
                 <br>
                 <span id="tagline">Web Developer</span>
-                <br><br><br><br>
-                <Button label="Contact Me" class="p-button-raised p-button-rounded p-button-lg"  @click="scrollToContact($event)" />
+                <Button id="cta" label="Contact Me" class="p-button-raised p-button-rounded p-button-lg"  @click="scrollToContact($event)" />
             </div>
         </div>
     </section>
@@ -123,6 +122,10 @@ export default {
         font-weight: 300;
     }
 
+    #cta {
+        margin: 4rem 0 0 0;
+    }
+
     #top-wave-bg {
         width: 100%;
     }
@@ -136,5 +139,15 @@ export default {
     .p-button:hover {
         background: #2daa89;
         color: #eee;
+    }
+
+    @media only screen and (max-width: 767px) {
+        #tagline {
+            font-size: 2.5rem;
+        }
+
+        #cta {
+            margin: 2rem 0 0 0;
+        }
     }
 </style>
