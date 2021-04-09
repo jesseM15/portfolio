@@ -5,10 +5,15 @@
     <section id="section-contact">
         <div id="container-contact" class="container p-grid">
             <div class="p-col-12">
-                <h1>Contact</h1>
+                <div class="icon-container">
+                    <i class="pi pi-envelope icon contact"></i>
+                </div>
+                <div class="section-text">
+                    <h1>Contact</h1>
+                </div>
             </div>
             <div class="p-md-6 center">
-                <svg width="320" height="327" viewBox="0 0 320 327" fill="none" xmlns="http://www.w3.org/2000/svg" class="responsive">
+                <svg id="mailbox" width="320" height="327" viewBox="0 0 320 327" fill="none" xmlns="http://www.w3.org/2000/svg" class="responsive">
                 <path d="M95.0629 96.1459C76.2273 108.677 63.9445 169.084 122.524 282.137C132.652 301.683 161.87 303.887 184.335 297.937C212.415 290.499 268.481 205.414 283.839 153.502C299.196 101.59 206.328 40.161 159.393 23.1312C112.459 6.10145 116.59 40.8318 114.899 56.246C113.207 71.6603 113.899 83.615 95.0629 96.1459Z" fill="#D0E9F1"/>
                 <rect width="36.7589" height="26.2563" transform="matrix(-1 0 0 1 186.42 99.774)" fill="#CCCCCC"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M139.159 110.292V126.03H160.164V110.277H160.164C160.164 110.277 160.164 110.277 160.164 110.277C160.164 104.476 155.461 99.774 149.661 99.774C143.861 99.774 139.159 104.476 139.159 110.277C139.159 110.282 139.159 110.287 139.159 110.292Z" fill="#C4C4C4"/>
@@ -39,7 +44,7 @@
     @import '~/app.scss';
 
     #section-contact {
-        padding: 4rem 0;
+        padding: 2rem 0;
         background: #073B4C;
         color: #fff;
     }
@@ -49,5 +54,23 @@
         display: block;
         position: relative;
         bottom: -1px;
+    }
+
+    .icon.contact {
+        color: #174B5C;
+        border-color: #174B5C;
+        left: 5rem;
+        top: -2rem;
+    }
+
+    #mailbox {
+        position: relative;
+        z-index: 10;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .icon.contact {
+            left: 2rem;
+        }
     }
 </style>

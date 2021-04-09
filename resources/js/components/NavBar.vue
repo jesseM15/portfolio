@@ -23,18 +23,21 @@ export default {
         const items = reactive([
             {
                 label: 'About',
+                icon: 'pi pi-fw pi-question',
                 command: (event) => {
                     document.querySelector('#section-about').scrollIntoView({behavior: 'smooth'})
                 }
             },
             {
                 label: 'Skills',
+                icon: 'pi pi-fw pi-desktop',
                 command: (event) => {
                     document.querySelector('#section-skills').scrollIntoView({behavior: 'smooth'})
                 }
             },
             {
                 label: 'Contact',
+                icon: 'pi pi-fw pi-envelope',
                 command: (event) => {
                     document.querySelector('#section-contact').scrollIntoView({behavior: 'smooth'})
                 }
@@ -68,7 +71,6 @@ export default {
         border: none;
         padding: 1.5rem 0;
         font-family: 'Poppins', arial, sans-serif;
-        
     }
 
     #logo {

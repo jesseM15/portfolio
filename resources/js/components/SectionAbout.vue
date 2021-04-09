@@ -27,11 +27,16 @@
                 </transition>
             </div>
             <div id="about-text" class="p-md-6">
-                <h1>About Me</h1>
-                <p>
-                    I am a full stack developer with over 4 years of professional experience.
-                    I strive to create an optimal user experiences through elegant code that works across all platforms and devices.
-                </p>
+                <div class="icon-container">
+                    <i class="pi pi-question icon about"></i>
+                </div>
+                <div class="section-text">
+                    <h1>About Me</h1>
+                    <p>
+                        I am a full stack developer with over 4 years of professional experience.
+                        I strive to create an optimal user experiences through elegant code that works across all platforms and devices.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -91,9 +96,25 @@ export default {
         position: absolute;
         right: 60vw;
         top: -2rem;
+        z-index: 9;
+    }
+
+    #coffee {
+        position: relative;
+        z-index: 10;
+    }
+
+    .icon.about {
+        left: -7rem;
+        top: -4rem;
     }
 
     @media only screen and (max-width: 767px) {
+        #section-about {
+            padding: 4rem 0 2rem 0;
+            overflow: hidden;
+        }
+
         #coffee-bg {
             position: absolute;
             right: 20vw;
@@ -102,6 +123,10 @@ export default {
 
         #about-text {
             margin-top: 4rem;
+        }
+
+        .icon.about {
+            left: 50vw;
         }
     }
 </style>

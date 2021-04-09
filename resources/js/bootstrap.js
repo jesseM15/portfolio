@@ -16,6 +16,6 @@ window.gsap = gsap;
 const app = createApp(App)
 app.use(router)
 app.use(VueReCaptcha, { siteKey: process.env.RECAPTCHA_SITE_KEY, loaderOptions: { autoHideBadge: true } })
-app.use(PrimeVue)
+app.use(PrimeVue, {ripple: true})
 app.component('Button', Button)
 router.isReady().then(() => app.mount('#app'))

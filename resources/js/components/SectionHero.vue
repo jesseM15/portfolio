@@ -56,9 +56,9 @@
                 </transition>
             </div>
             <div class="p-md-6 center">
-                <span id="tagline-intro">Hi there, I am a full stack</span>
+                <div id="tagline-intro">Hi there, I am a full stack</div>
                 <br>
-                <span id="tagline">Web Developer</span>
+                <div id="tagline">Web Developer</div>
                 <Button id="cta" label="Contact Me" class="p-button-raised p-button-rounded p-button-lg"  @click="scrollToContact($event)" />
             </div>
         </div>
