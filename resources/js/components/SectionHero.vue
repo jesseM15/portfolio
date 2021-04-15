@@ -134,11 +134,12 @@ export default {
         background: #06D6A0;
         color: #fff;
         font-family: 'Poppins', arial, sans-serif;
+        border: none;
     }
 
     .p-button:hover {
-        background: #2daa89;
-        color: #eee;
+        background: #2daa89 !important;
+        color: #eee !important;
     }
 
     @media only screen and (max-width: 767px) {

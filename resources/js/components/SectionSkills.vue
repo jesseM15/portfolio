@@ -8,7 +8,7 @@
                 <div class="section-text">
                     <h1>Skills</h1>
                     <p>I am skilled in a variety of web technologies and regularly pick up new ones.</p>
-                    <p>For a sample of my work please contact me and request a copy of my resume</p>
+                    <p>For a sample of my work please contact me and request a copy of my resume.</p>
                 </div>
             </div>
             <div class="p-md-3"></div>
