@@ -61,7 +61,7 @@ export default {
 
     #navbar {
         width: 100%;
-        background: #073B4CEE;
+        background: #073b4cee;
         position: fixed;
     }
 
@@ -70,7 +70,7 @@ export default {
         background: transparent;
         border: none;
         padding: 1.5rem 0;
-        font-family: 'Poppins', arial, sans-serif;
+        font-family: $font-family-sans-serif;
     }
 
     #logo {

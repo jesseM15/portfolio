@@ -150,6 +150,8 @@
 </script>
 
 <style scoped lang="scss">
+    @import '~/app.scss';
+
     #contact-form-legend {
         float: right;
         position: relative;
@@ -170,8 +172,8 @@
 
     .p-button {
         background: #06D6A0;
-        color: #fff;
-        font-family: 'Poppins', arial, sans-serif;
+        color: $body-color;
+        font-family: $font-family-sans-serif;
         border: none;
     }
 

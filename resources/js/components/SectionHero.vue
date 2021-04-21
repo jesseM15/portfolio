@@ -101,7 +101,7 @@ export default {
     @import '~/app.scss';
 
     #section-hero {
-        background: #073B4C;
+        background: $body-bg;
         padding: 8rem 0 4rem 0;
     }
 
@@ -110,7 +110,7 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: #fff;
+        color: $body-color;
     }
 
     #tagline-intro {
@@ -132,8 +132,8 @@ export default {
 
     .p-button {
         background: #06D6A0;
-        color: #fff;
-        font-family: 'Poppins', arial, sans-serif;
+        color: $body-color;
+        font-family: $font-family-sans-serif;
         border: none;
     }
 
@@ -142,7 +142,7 @@ export default {
         color: #eee !important;
     }
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: $tablet) {
         #tagline {
             font-size: 2.5rem;
         }
