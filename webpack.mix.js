@@ -13,11 +13,16 @@ const mix = require('laravel-mix');
  |
  */
 
-let dotenvplugin = new webpack.DefinePlugin({
+const dotenvplugin = new webpack.DefinePlugin({
     'process.env': {
         APP_ENV: JSON.stringify(process.env.APP_ENV || 'production'),
         RECAPTCHA_SITE_KEY: JSON.stringify(process.env.RECAPTCHA_SITE_KEY || '')
     }
+})
+
+const bundleplugin = new webpack.DefinePlugin({
+    __VUE_OPTIONS_API__: true,
+    __VUE_PROD_DEVTOOLS__: false,
 })
 
 mix.js('resources/js/app.js', 'public/js')
@@ -30,6 +35,7 @@ mix.js('resources/js/app.js', 'public/js')
         },
         plugins: [
             dotenvplugin,
+            bundleplugin,
         ]
     })
     .browserSync({
