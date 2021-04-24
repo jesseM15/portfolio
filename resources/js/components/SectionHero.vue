@@ -60,6 +60,8 @@
                 <br>
                 <div id="tagline">Web Developer</div>
                 <Button id="cta" label="Contact Me" class="p-button-raised p-button-rounded p-button-lg"  @click="scrollToContact($event)" />
+                <br><br>
+                <a href="https://github.com/jessem15" target="_blank"><i class="pi pi-github social"></i></a>
             </div>
         </div>
     </section>
@@ -140,6 +142,10 @@ export default {
     .p-button:hover {
         background: #2daa89 !important;
         color: #eee !important;
+    }
+
+    .social {
+        font-size: 1.5rem;
     }
 
     @media only screen and (max-width: $tablet) {

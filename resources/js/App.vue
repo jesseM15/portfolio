@@ -7,7 +7,7 @@
             <view-home></view-home>
         </main>
         <footer>
-            &copy;2021 jfry
+            <footer-bar></footer-bar>
         </footer>
     </div>
 </template>
@@ -15,6 +15,7 @@
 <script>
     import NavBar from '@/components/NavBar.vue'
     import ViewHome from '@/views/ViewHome.vue'
+    import FooterBar from '@/components/FooterBar.vue'
 
     export default {
         name: 'App',
@@ -22,6 +23,7 @@
         components: {
             NavBar,
             ViewHome,
+            FooterBar,
         },
     }
 </script>

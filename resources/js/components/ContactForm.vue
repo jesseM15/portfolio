@@ -57,7 +57,7 @@
     import Card from 'primevue/card'
     import InputText from 'primevue/inputtext'
     import Textarea from 'primevue/textarea'
-    import { ref, onMounted } from 'vue'
+    import { ref } from 'vue'
     import { useReCaptcha } from 'vue-recaptcha-v3'
     
     export default {
@@ -68,8 +68,6 @@
         },
 
         setup(props, context) {
-            onMounted(() => {console.log('ContactForm mounted.')})
-
             let contactFormName = ref(null)
             let contactFormEmail = ref(null)
             let contactFormMessage = ref(null)

@@ -57,17 +57,6 @@ main {
     flex-grow: 1;
 }
 
-footer {
-    width: 100%;
-    min-height: 3rem;
-    text-align: center;
-    border-top: 1px solid $body-color-alt;
-    padding-top: 0.75rem;
-    z-index: 10;
-    background: $body-bg;
-    color: $body-color;
-}
-
 .container {
     max-width: 1000px;
     margin: 0 auto;
