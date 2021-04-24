@@ -169,15 +169,15 @@
     }
 
     .p-button {
-        background: #06D6A0;
-        color: $body-color;
+        color: #000;
+        background: #d9b45a;
         font-family: $font-family-sans-serif;
         border: none;
     }
 
     .p-button:hover {
-        background: #2daa89 !important;
-        color: #eee !important;
+        color: #000;
+        background: #f0b216;
     }
 
     #required-recaptcha-message {
