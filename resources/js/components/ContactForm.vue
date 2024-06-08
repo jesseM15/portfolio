@@ -57,7 +57,7 @@
     import Card from 'primevue/card'
     import InputText from 'primevue/inputtext'
     import Textarea from 'primevue/textarea'
-    import { ref, onMounted } from 'vue'
+    import { ref } from 'vue'
     import { useReCaptcha } from 'vue-recaptcha-v3'
     
     export default {
@@ -68,8 +68,6 @@
         },
 
         setup(props, context) {
-            onMounted(() => {console.log('ContactForm mounted.')})
-
             let contactFormName = ref(null)
             let contactFormEmail = ref(null)
             let contactFormMessage = ref(null)
@@ -150,6 +148,8 @@
 </script>
 
 <style scoped lang="scss">
+    @import '~/app.scss';
+
     #contact-form-legend {
         float: right;
         position: relative;
@@ -169,15 +169,15 @@
     }
 
     .p-button {
-        background: #06D6A0;
-        color: #fff;
-        font-family: 'Poppins', arial, sans-serif;
+        color: #000;
+        background: #d9b45a;
+        font-family: $font-family-sans-serif;
         border: none;
     }
 
     .p-button:hover {
-        background: #2daa89 !important;
-        color: #eee !important;
+        color: #000;
+        background: #f0b216;
     }
 
     #required-recaptcha-message {

@@ -48,7 +48,7 @@
         top: -2rem;
     }
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: $tablet) {
         #section-skills {
             padding: 0 0 4rem 0;
         }

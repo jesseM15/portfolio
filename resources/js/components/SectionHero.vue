@@ -60,6 +60,8 @@
                 <br>
                 <div id="tagline">Web Developer</div>
                 <Button id="cta" label="Contact Me" class="p-button-raised p-button-rounded p-button-lg"  @click="scrollToContact($event)" />
+                <br><br>
+                <a href="https://github.com/jessem15" target="_blank"><i class="pi pi-github social"></i></a>
             </div>
         </div>
     </section>
@@ -101,7 +103,7 @@ export default {
     @import '~/app.scss';
 
     #section-hero {
-        background: #073B4C;
+        background: $body-bg;
         padding: 8rem 0 4rem 0;
     }
 
@@ -110,7 +112,7 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: #fff;
+        color: $body-color;
     }
 
     #tagline-intro {
@@ -131,18 +133,21 @@ export default {
     }
 
     .p-button {
-        background: #06D6A0;
-        color: #fff;
-        font-family: 'Poppins', arial, sans-serif;
-        border: none;
+        color: #000;
+        background: #d9b45a;
+        font-family: $font-family-sans-serif;
     }
 
     .p-button:hover {
-        background: #2daa89 !important;
-        color: #eee !important;
+        color: #000;
+        background: #f0b216;
     }
 
-    @media only screen and (max-width: 767px) {
+    .social {
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: $tablet) {
         #tagline {
             font-size: 2.5rem;
         }

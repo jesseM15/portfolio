@@ -45,8 +45,8 @@
 
     #section-contact {
         padding: 2rem 0;
-        background: #073B4C;
-        color: #fff;
+        background: $body-bg;
+        color: $body-color;
     }
 
     #bottom-wave-bg {
@@ -68,7 +68,7 @@
         z-index: 10;
     }
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: $tablet) {
         .icon.contact {
             left: 2rem;
         }

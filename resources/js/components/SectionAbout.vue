@@ -109,7 +109,7 @@ export default {
         top: -4rem;
     }
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: $tablet) {
         #section-about {
             padding: 4rem 0 2rem 0;
             overflow: hidden;
